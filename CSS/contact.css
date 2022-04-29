@@ -1,0 +1,156 @@
+body {
+	font-family: "Montserrat", sans-serif;
+	width: 100vw;
+	background-color: rgb(118, 171, 127);
+	overflow-x: hidden;
+}
+/* Style Contact */
+.contact {
+	width: 60%;
+	margin: 100px auto;
+	/* border: 1px solid black; */
+	box-sizing: border-box;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+
+.contact form {
+	display: block;
+	width: 70%;
+	/* border: 1px solid black; */
+	margin: 0 0 20px;
+}
+
+.contact form > * {
+	display: block;
+}
+
+.contact h1 {
+	font-size: 2rem;
+	font-family: "Lato", sans-serif;
+	background-color: coral;
+	color: white;
+	margin-bottom: 30px;
+	padding: 10px 12px;
+	border-radius: 20px;
+	text-shadow: 0 2px 2px rgb(153, 153, 153);
+	box-shadow: 0px -6px 5px -6px #555, 0px 6px 5px -5px #555;
+}
+
+.contact form label {
+	font-family: "Lato", sans-serif;
+	margin: 15px 0 10px;
+	font-size: 1.2rem;
+	color: rgb(255, 251, 0);
+	font-weight: 700;
+	text-shadow: 0 1px 2px rgb(69, 85, 255);
+}
+
+.contact form input,
+textarea {
+	width: 60%;
+	outline: none;
+	border: none;
+	padding: 10px;
+	font-size: 1rem;
+	font-family: "Lato", sans-serif;
+	caret-color: coral;
+	border-radius: 15px;
+	box-shadow: 0px -6px 5px -6px #555, 0px 6px 5px -5px #555,
+		-6px 0px 5px -5px #555, 6px 0px 5px -5px #555;
+}
+
+.contact form textarea {
+	width: 90%;
+	height: 150px;
+	resize: vertical;
+}
+
+.contact form input:focus,
+textarea:focus {
+	box-shadow: none;
+}
+.contact .button {
+	width: 60%;
+	/* border: 1px solid black; */
+	margin: 20px auto 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.contact .button button {
+	border: none;
+	padding: 8px 13px;
+	border-radius: 30px;
+	font-size: 1rem;
+	box-shadow: 0 6px 5px -5px #555;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.button button:hover {
+	transform: translateY(-2px);
+}
+
+.button button:active {
+	transform: translateY(0);
+	box-shadow: none;
+}
+
+.button button[type="submit"] {
+	background-color: rgb(100, 100, 236);
+	color: white;
+}
+
+.button button[type="submit"]:hover {
+	background-color: rgb(54, 54, 243);
+}
+
+.button button[type="reset"] {
+	background-color: rgb(236, 100, 109);
+	color: white;
+}
+
+.button button[type="reset"]:hover {
+	background-color: rgb(243, 54, 54);
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 1400px) {
+	.contact form {
+		width: 500px;
+	}
+	.contact .button {
+		width: 250px;
+	}
+}
+
+@media (max-width: 900px) {
+	.contact {
+		width: 70%;
+	}
+	.contact form {
+		width: 80%;
+	}
+	.contact .button {
+		width: 60%;
+	}
+}
+
+@media (max-width: 576px) {
+	.contact {
+		width: 90%;
+	}
+	.contact form {
+		width: 90%;
+	}
+	.contact .button {
+		width: 70%;
+	}
+	.contact form textarea {
+		width: 90%;
+	}
+}

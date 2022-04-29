@@ -1,0 +1,226 @@
+body {
+	font-family: "Montserrat", sans-serif;
+	width: 100vw;
+	background-color: rgb(250, 235, 215);
+	overflow-x: hidden;
+}
+
+/* Style Section */
+/* .navbar .navigasi ul {
+	height: 29.333px;
+	padding-top: 5;
+	padding-bottom: 5;
+} */
+.hero {
+	/* height: 600px; */
+	display: grid;
+	grid-template-areas: "Perkenalan Foto";
+	grid-template-columns: repeat(2, 1fr);
+	justify-items: center;
+	/* justify-content: space-between;
+	align-items: center; */
+	width: 80%;
+	padding: 10px 0;
+	margin: 120px auto 50px;
+	/* background-color: aquamarine; */
+	box-sizing: border-box;
+	position: relative;
+	/* border: 1px solid black; */
+	/* gap: 10px; */
+}
+
+.hero .info-tambahan {
+	grid-area: Perkenalan;
+	padding: 20px;
+	/* border: 1px solid black; */
+	/* background-color: aqua; */
+}
+
+.hero .info-tambahan h1:nth-child(2) {
+	margin: 10px 0;
+	font-size: 2.5rem;
+	font-weight: 700;
+	text-shadow: 0 3px 2px white;
+}
+
+.hero .info-tambahan a.cv {
+	display: block;
+	width: fit-content;
+	margin: 30px 0;
+	padding: 10px;
+	background-color: rgba(0, 255, 255, 0.5);
+	text-decoration: none;
+	color: rgb(218, 124, 56);
+	border-radius: 20px;
+	font-weight: 700;
+	transition: all 0.3s;
+}
+
+.hero .info-tambahan a.cv:hover {
+	background-color: rgb(0, 255, 255);
+	color: chocolate;
+	transform: translateY(-5px);
+}
+
+.hero .info-tambahan a.cv:active {
+	background-color: rgb(0, 255, 255);
+	color: chocolate;
+	transform: translateY(0);
+}
+
+.hero .foto {
+	grid-area: Foto;
+	justify-self: center;
+	position: relative;
+	right: -80px;
+	align-self: center;
+	transform: scale(1.2);
+	/* border: 1px solid black; */
+}
+
+.hero .foto img {
+	z-index: 1;
+	border-radius: 50%;
+	border: 2px solid rgb(139, 255, 238);
+	box-shadow: 0 0 5px 5px rgb(235, 177, 136);
+	background-color: rgb(190, 190, 190);
+}
+
+/* Style Skills */
+.skills {
+	width: 80%;
+	margin: 100px auto 20px;
+	/* border: 1px solid black; */
+	display: flex;
+	justify-content: space-around;
+	font-family: "Lato", sans-serif;
+	position: relative;
+	flex-wrap: wrap;
+	margin: 200px auto;
+}
+
+.skills .card {
+	width: 25%;
+	padding: 20px;
+	border: 3px solid black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 20px;
+	background-color: aquamarine;
+	margin-top: 50px;
+}
+
+.skills h1.title {
+	position: absolute;
+	top: -50px;
+	font-size: 2rem;
+	background-color: aqua;
+	padding: 10px;
+	border-radius: 10px;
+	color: rgb(0, 0, 0);
+	text-shadow: 0 4px 3px rgb(249, 249, 249);
+	border: 3px solid black;
+}
+
+.card p {
+	text-align: justify;
+	margin: 30px auto;
+}
+.skills .card h1 {
+	font-size: 1.8rem;
+	font-weight: 700;
+	color: deepskyblue;
+	text-shadow: 0 2px 2px rgb(245, 255, 159);
+	text-align: center;
+	margin: 20px auto 0;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1100px) {
+	.hero .foto {
+		position: relative;
+		top: 0;
+		right: -50px;
+	}
+	.skills .card {
+		width: 40%;
+	}
+}
+
+@media (max-width: 768px) {
+	.hero {
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/* justify-content: center; */
+		position: relative;
+		/* grid-template-areas: "Salam", "Foto", "Summary";
+		grid-template-rows: 2fr 1fr 2fr; */
+	}
+
+	.hero .foto {
+		position: relative;
+		top: -480px;
+		right: 0;
+	}
+
+	.hero .info-tambahan h1:first-child {
+		display: none;
+	}
+	.hero .info-tambahan h1:nth-child(2) {
+		font-size: 1.8rem;
+		margin-top: 230px;
+		text-align: center;
+	}
+	.hero .info-tambahan p {
+		text-align: center;
+	}
+	.hero .info-tambahan a.cv {
+		margin: 30px auto;
+	}
+	.skills {
+		width: 90%;
+	}
+	.skills .card {
+		width: 40%;
+	}
+}
+
+@media (max-width: 576px) {
+	.hero {
+		margin-bottom: -120px;
+		/* border: 1px solid black; */
+	}
+	.hero .foto {
+		position: relative;
+		top: -500px;
+		right: 0;
+	}
+	.skills {
+		width: 70%;
+	}
+	.skills .card {
+		width: 70%;
+	}
+}
+
+@media (max-width: 400px) {
+	.hero .foto {
+		position: relative;
+		top: -500px;
+		right: 0;
+	}
+
+	.hero .info-tambahan h1:nth-child(2) {
+		font-size: 1.3rem;
+	}
+
+	.skills {
+		width: 90%;
+	}
+	.skills .card {
+		width: 70%;
+	}
+}

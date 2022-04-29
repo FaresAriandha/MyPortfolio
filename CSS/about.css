@@ -1,0 +1,243 @@
+body {
+	font-family: "Montserrat", sans-serif;
+	width: 100vw;
+	background-color: rgb(118, 171, 170);
+	overflow-x: hidden;
+}
+
+/* Style Foto */
+
+.about {
+	width: 80%;
+	height: 400px;
+	display: flex;
+	margin: 100px auto 50px;
+	/* border: 1px solid black; */
+	align-items: center;
+	justify-content: space-evenly;
+	/* position: relative; */
+	/* overflow: hidden; */
+	box-sizing: border-box;
+}
+.about .gambar {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	width: 300px;
+	height: fit-content;
+	position: relative;
+	left: -100px;
+	/* top: 0; */
+	/* border: 1px solid black; */
+}
+.about .gambar img {
+	width: 200px;
+	height: 200px;
+	z-index: 1;
+	border-radius: 50%;
+	border: 1px solid transparent;
+	transform: scale(1.2);
+	position: relative;
+	left: 10px;
+	top: -250px;
+}
+.about .gambar .hias {
+	position: relative;
+	width: 250px;
+	height: 250px;
+	/* z-index: -1; */
+	/* border: 1px solid black; */
+}
+.gambar .hias-1 {
+	transform: scale(1.2);
+	top: 230px;
+	left: 50px;
+	border-top-left-radius: 80%;
+	border-top-right-radius: 80%;
+	border-bottom-left-radius: 60%;
+	border-bottom-right-radius: 60%;
+	background-color: rgb(0, 255, 179);
+}
+.gambar .hias-2 {
+	top: -40px;
+	left: -10px;
+	border-top-left-radius: 60%;
+	border-top-right-radius: 60%;
+	border-bottom-left-radius: 30%;
+	border-bottom-right-radius: 30%;
+	background-color: rgb(0, 187, 255);
+}
+
+.about .isiAbout {
+	justify-self: flex-end;
+	width: 500px;
+	/* border: 1px solid black; */
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.isiAbout h1 {
+	width: fit-content;
+	font-size: 2rem;
+	color: aquamarine;
+	text-shadow: -1px 3px 2px rgb(170, 0, 255);
+	background-color: rgb(244, 105, 144);
+	padding: 5px 10px;
+	border-radius: 50px;
+	box-shadow: 1px 5px 3px -2px #444;
+	margin-bottom: 10px;
+}
+
+.isiAbout h3 {
+	font-size: 1rem;
+	margin-bottom: 30px;
+	font-weight: 400;
+	text-shadow: 0 1px 1px #ddd;
+}
+
+.isiAbout p {
+	text-align: justify;
+	margin-bottom: 30px;
+}
+
+.isiAbout a {
+	display: block;
+	width: fit-content;
+	padding: 10px;
+	background-color: rgba(0, 255, 255, 0.5);
+	text-decoration: none;
+	color: rgb(218, 124, 56);
+	border-radius: 20px;
+	font-weight: 700;
+	align-self: center;
+	transition: all 0.3s;
+}
+
+.isiAbout a:hover {
+	background-color: rgb(0, 255, 255);
+	color: chocolate;
+	transform: translateY(-5px);
+}
+
+.isiAbout a:active {
+	background-color: rgb(0, 255, 255);
+	color: chocolate;
+	transform: translateY(0);
+}
+
+section .videoProfile {
+	width: 600px;
+	margin: 50px auto 100px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* border: 1px solid black; */
+	/* background-color: bisque; */
+}
+
+.videoProfile h1 {
+	font-family: "Lato", sans-serif;
+	font-size: 2rem;
+	color: aquamarine;
+	text-shadow: -1px 3px 2px rgb(170, 0, 255);
+	background-color: rgb(244, 105, 144);
+	padding: 5px 10px;
+	border-radius: 50px;
+	box-shadow: 1px 5px 3px -2px #444;
+	margin: 20px 0;
+}
+
+.videoProfile video {
+	height: fit-content;
+	border-radius: 30px;
+	box-shadow: 1px 10px 5px -5px #444;
+	margin-top: 30px;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1100px) {
+	.about {
+		width: 90%;
+	}
+
+	.about .gambar {
+		left: -70px;
+	}
+	.about .gambar img {
+		transform: scale(1);
+	}
+	.about .gambar .hias-1,
+	.about .gambar .hias-2 {
+		transform: scale(1);
+	}
+
+	.about .gambar .hias-2 {
+		transform: scale(0.9);
+		left: 10px;
+	}
+}
+
+@media (max-width: 800px) {
+	.about .gambar {
+		left: -60px;
+	}
+	.about .gambar img {
+		transform: scale(0.9);
+	}
+	.about .gambar .hias-1,
+	.about .gambar .hias-2 {
+		transform: scale(0.9);
+	}
+
+	.about .gambar .hias-2 {
+		transform: scale(0.8);
+		left: 10px;
+	}
+}
+
+@media (max-width: 576px) {
+	.about {
+		/* position: relative; */
+		margin: 100px auto 50px;
+		/* flex-direction: column; */
+		flex-wrap: wrap;
+		height: 600px;
+		/* border: 1px solid black; */
+		/* align-self: center; */
+		padding: 10px;
+	}
+	.about .gambar {
+		top: -150px;
+	}
+	.about .isiAbout {
+		width: 90%;
+		/* position: relative; */
+		top: -400px;
+		/* border: 1px solid black; */
+	}
+	.about .isiAbout h1 {
+		position: relative;
+		top: -300px;
+		align-self: center;
+	}
+	.about .isiAbout h3 {
+		position: relative;
+		top: -10px;
+		align-self: center;
+		font-size: 0.9rem;
+	}
+
+	section .videoProfile {
+		width: 90%;
+		margin: 200px auto;
+		/* border: 1px solid black; */
+	}
+
+	.videoProfile video {
+		width: 100%;
+		margin-top: 20px;
+	}
+}
